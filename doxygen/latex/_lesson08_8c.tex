@@ -1,0 +1,154 @@
+\hypertarget{_lesson08_8c}{}\section{C\+:/src/\+Open\+G\+L/\+Lesson08/\+Lesson08.c File Reference}
+\label{_lesson08_8c}\index{C\+:/src/\+Open\+G\+L/\+Lesson08/\+Lesson08.\+c@{C\+:/src/\+Open\+G\+L/\+Lesson08/\+Lesson08.\+c}}
+
+
+Ouvre une simple fenêtre Windows et dessine un cube avec un blending grace à un fichier B\+I\+T\+M\+A\+P avec une rotation obtenue par les flêches du clavier.  
+
+
+{\ttfamily \#include $<$windows.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$gl\textbackslash{}gl.\+h$>$}\\*
+{\ttfamily \#include $<$gl\textbackslash{}glu.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_lesson08_8c_a9135ea2a0d6fce68ba3b858226a31a4f}{}L\+R\+E\+S\+U\+L\+T C\+A\+L\+L\+B\+A\+C\+K {\bfseries Wnd\+Proc} (H\+W\+N\+D, U\+I\+N\+T, W\+P\+A\+R\+A\+M, L\+P\+A\+R\+A\+M)\label{_lesson08_8c_a9135ea2a0d6fce68ba3b858226a31a4f}
+
+\item 
+\hypertarget{_lesson08_8c_ae1c091a456680cc628759567198fe7ec}{}bool {\bfseries Ne\+He\+Load\+Bitmap3} (L\+P\+T\+S\+T\+R sz\+File\+Name, G\+Luint $\ast$texid)\label{_lesson08_8c_ae1c091a456680cc628759567198fe7ec}
+
+\item 
+\hypertarget{_lesson08_8c_a8dd15539ba90ae3670aa0a9f889d2236}{}int {\bfseries Load\+G\+L\+Textures} ()\label{_lesson08_8c_a8dd15539ba90ae3670aa0a9f889d2236}
+
+\item 
+\hypertarget{_lesson08_8c_a87bb84d489df61ed7b0c002584fd984f}{}G\+Lvoid {\bfseries Re\+Size\+G\+L\+Scene} (G\+Lsizei width, G\+Lsizei height)\label{_lesson08_8c_a87bb84d489df61ed7b0c002584fd984f}
+
+\item 
+\hypertarget{_lesson08_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}{}int {\bfseries Init\+G\+L} (G\+Lvoid)\label{_lesson08_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae}
+
+\item 
+\hypertarget{_lesson08_8c_a52061247bdaeb770e3a1d59eefaad972}{}int {\bfseries Draw\+G\+L\+Scene} (G\+Lvoid)\label{_lesson08_8c_a52061247bdaeb770e3a1d59eefaad972}
+
+\item 
+\hypertarget{_lesson08_8c_af33a2273205c1491be5916d3091658e0}{}G\+Lvoid {\bfseries Kill\+G\+L\+Window} (G\+Lvoid)\label{_lesson08_8c_af33a2273205c1491be5916d3091658e0}
+
+\item 
+B\+O\+O\+L \hyperlink{_lesson08_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}{Create\+G\+L\+Window} (char $\ast$title, int width, int height, int bits, B\+O\+O\+L fullscreenflag)
+\item 
+\hypertarget{_lesson08_8c_a661c2abc03926acfaeb93b4ae7db4943}{}int W\+I\+N\+A\+P\+I {\bfseries Win\+Main} (H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Prev\+Instance, L\+P\+S\+T\+R lp\+Cmd\+Line, int n\+Cmd\+Show)\label{_lesson08_8c_a661c2abc03926acfaeb93b4ae7db4943}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_lesson08_8c_a78f6446a0e13adc7b7b2f239112ac785}{}H\+D\+C {\bfseries h\+D\+C} =N\+U\+L\+L\label{_lesson08_8c_a78f6446a0e13adc7b7b2f239112ac785}
+
+\item 
+\hypertarget{_lesson08_8c_a874963259c7cd998acfe6e187fbdb4c1}{}H\+G\+L\+R\+C {\bfseries h\+R\+C} =N\+U\+L\+L\label{_lesson08_8c_a874963259c7cd998acfe6e187fbdb4c1}
+
+\item 
+\hypertarget{_lesson08_8c_afec4341c234519e145bac6f0e5edaa51}{}H\+W\+N\+D {\bfseries h\+Wnd} =N\+U\+L\+L\label{_lesson08_8c_afec4341c234519e145bac6f0e5edaa51}
+
+\item 
+\hypertarget{_lesson08_8c_a74029128723095e7bf00a71d46af8b24}{}H\+I\+N\+S\+T\+A\+N\+C\+E {\bfseries h\+Instance}\label{_lesson08_8c_a74029128723095e7bf00a71d46af8b24}
+
+\item 
+\hypertarget{_lesson08_8c_a55a8351b704275ad12988864918abb2a}{}B\+O\+O\+L {\bfseries keys} \mbox{[}256\mbox{]}\label{_lesson08_8c_a55a8351b704275ad12988864918abb2a}
+
+\item 
+\hypertarget{_lesson08_8c_a22389371583c4b8843e06da43399d6d9}{}B\+O\+O\+L {\bfseries active} =T\+R\+U\+E\label{_lesson08_8c_a22389371583c4b8843e06da43399d6d9}
+
+\item 
+\hypertarget{_lesson08_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}{}B\+O\+O\+L {\bfseries fullscreen} =T\+R\+U\+E\label{_lesson08_8c_ab15a33c0173f2c5b6ac806c55cf7f0ba}
+
+\item 
+\hypertarget{_lesson08_8c_ad25e653a5a1f98aa808c98dad4918ab1}{}B\+O\+O\+L {\bfseries light}\label{_lesson08_8c_ad25e653a5a1f98aa808c98dad4918ab1}
+
+\item 
+\hypertarget{_lesson08_8c_af3d0c623676f78dff5a84bc436095550}{}B\+O\+O\+L {\bfseries blend}\label{_lesson08_8c_af3d0c623676f78dff5a84bc436095550}
+
+\item 
+\hypertarget{_lesson08_8c_ac09372156863f02e507831862897c2a8}{}B\+O\+O\+L {\bfseries lp}\label{_lesson08_8c_ac09372156863f02e507831862897c2a8}
+
+\item 
+\hypertarget{_lesson08_8c_a351433969208eaa89b942d3e587fcc9c}{}B\+O\+O\+L {\bfseries fp}\label{_lesson08_8c_a351433969208eaa89b942d3e587fcc9c}
+
+\item 
+\hypertarget{_lesson08_8c_a81fe5d48ae6cf5016dfc24c0835dee10}{}B\+O\+O\+L {\bfseries bp}\label{_lesson08_8c_a81fe5d48ae6cf5016dfc24c0835dee10}
+
+\item 
+\hypertarget{_lesson08_8c_a599f50b1636901ceee9b660ef480a49c}{}G\+Lfloat {\bfseries xrot}\label{_lesson08_8c_a599f50b1636901ceee9b660ef480a49c}
+
+\item 
+\hypertarget{_lesson08_8c_a9549138cf4d209303566523d805d8525}{}G\+Lfloat {\bfseries yrot}\label{_lesson08_8c_a9549138cf4d209303566523d805d8525}
+
+\item 
+\hypertarget{_lesson08_8c_a0b2f48da4eeb0f800c9e125995e81aed}{}G\+Lfloat {\bfseries xspeed}\label{_lesson08_8c_a0b2f48da4eeb0f800c9e125995e81aed}
+
+\item 
+\hypertarget{_lesson08_8c_a924f9c7295b7addcb7606fd6e4737d10}{}G\+Lfloat {\bfseries yspeed}\label{_lesson08_8c_a924f9c7295b7addcb7606fd6e4737d10}
+
+\item 
+\hypertarget{_lesson08_8c_acfde595878f838c910907ec90d040114}{}G\+Lfloat {\bfseries z} =-\/5.\+0f\label{_lesson08_8c_acfde595878f838c910907ec90d040114}
+
+\item 
+\hypertarget{_lesson08_8c_a933b98c8ca09e30db7b47d4d8575eaab}{}G\+Lfloat {\bfseries Light\+Ambient} \mbox{[}$\,$\mbox{]} = \{ 0.\+5f, 0.\+5f, 0.\+5f, 1.\+0f \}\label{_lesson08_8c_a933b98c8ca09e30db7b47d4d8575eaab}
+
+\item 
+\hypertarget{_lesson08_8c_a71beb2ce6c0f1281cafe8529a93bebb1}{}G\+Lfloat {\bfseries Light\+Diffuse} \mbox{[}$\,$\mbox{]} = \{ 1.\+0f, 1.\+0f, 1.\+0f, 1.\+0f \}\label{_lesson08_8c_a71beb2ce6c0f1281cafe8529a93bebb1}
+
+\item 
+\hypertarget{_lesson08_8c_aabd772c6114f6182a5bd105869052b24}{}G\+Lfloat {\bfseries Light\+Position} \mbox{[}$\,$\mbox{]} = \{ 0.\+0f, 0.\+0f, 2.\+0f, 1.\+0f \}\label{_lesson08_8c_aabd772c6114f6182a5bd105869052b24}
+
+\item 
+\hypertarget{_lesson08_8c_abaab572c2d38c9839d1b9831155cb3f3}{}G\+Luint {\bfseries filter}\label{_lesson08_8c_abaab572c2d38c9839d1b9831155cb3f3}
+
+\item 
+\hypertarget{_lesson08_8c_ae303c167c23691bbf165ab05813e5713}{}G\+Luint {\bfseries texture} \mbox{[}3\mbox{]}\label{_lesson08_8c_ae303c167c23691bbf165ab05813e5713}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ouvre une simple fenêtre Windows et dessine un cube avec un blending grace à un fichier B\+I\+T\+M\+A\+P avec une rotation obtenue par les flêches du clavier. 
+
+Comments manageable by Doxygen
+
+Modified smoothly by Thierry D\+E\+C\+H\+A\+I\+Z\+E
+
+Paradigm \+: obtain one source (only one !) compatible for multiple free C Compilers and provide for all users an development environment on Windows (64 bits compatible), the great Code\+::\+Blocks manager (version 12.\+11), and don\textquotesingle{}t use glaux.\+lib or glaux.\+dll.
+
+a) Mingw 32 and 64 bits \+: downloadable \href{http://sourceforge.net/projects/mingw/}{\tt http\+://sourceforge.\+net/projects/mingw/} b) Mingw 32 D\+E\+V-\/\+C\+P\+P \+: included in old Dev-\/\+Cpp \href{http://sourceforge.net/projects/devcpp/}{\tt http\+://sourceforge.\+net/projects/devcpp/} c) Mingw 32 C\+B \+: included in package Code\+::\+Blocks (version 12.\+11) \href{http://sourceforge.net/projects/codeblocks/files/Binaries/12.11/Windows/}{\tt http\+://sourceforge.\+net/projects/codeblocks/files/\+Binaries/12.\+11/\+Windows/} d) Borland C \+: downloadable \href{http://edn.embarcadero.com/article/20633}{\tt http\+://edn.\+embarcadero.\+com/article/20633} e) Digital Mars Compiler C \+: version 8.\+57 downloadable \href{http://www.digitalmars.com}{\tt http\+://www.\+digitalmars.\+com} f) Open\+Watcom \+: version 1.\+9 downloadable \href{http://openwatcom.mirror.fr/}{\tt http\+://openwatcom.\+mirror.\+fr/} Version 2.\+0 64bits seems very buggy !!! g) Lcc and Lcc64 \+: downloadable \href{http://www.cs.virginia.edu/~lcc-win32/}{\tt http\+://www.\+cs.\+virginia.\+edu/$\sim$lcc-\/win32/} h) Cygwin \+: downloadable \href{http://www.cygwin.com/install.html}{\tt http\+://www.\+cygwin.\+com/install.\+html} (setup.\+exe) i) Visual Studio 2005 + 64bits\+: express edition for free (my version 2005 is full not express) \href{http://www.microsoft.com/france/visual-studio/essayez/express.aspx}{\tt http\+://www.\+microsoft.\+com/france/visual-\/studio/essayez/express.\+aspx} j) T\+D\+M G\+C\+C 64 bits \+: downloadable on \href{http://sourceforge.net/projects/TDM-GCC}{\tt http\+://sourceforge.\+net/projects/\+T\+D\+M-\/\+G\+C\+C}
+
+Important remark \+: All install in C partition, \char`\"{}no space\char`\"{} and \char`\"{}no special characters\char`\"{} in the name of directories (it\textquotesingle{}s reason to not install in C\+: Files (x86) ... by default proposed on windows 64 bits)
+
+Add resource file end resource header for restitute version + icon Open\+G\+L.\+ico for fun because versionning is important, same for freeware \+:-\/) !
+
+Date \+: 2015/12/23
+
+\begin{DoxyAuthor}{Author}
+Tom Stanis \& Jeff Molofee ( Ne\+He ) originely, Modified for L\+C\+C\+Win32 compiler by Robert Wishlaw 2002/11/23 
+
+After adapted by Thierry Dechaize to verify paradigm \+: one source for multiple C Compilers 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+23 décembre 2015
+\end{DoxyDate}
+Ce programme ne gére que deux événements \+: le clic sur le bouton \char`\"{}\+Fermé\char`\"{} de la fenêtre ou la sortie par la touche E\+S\+C. 
+
+\subsection{Function Documentation}
+\hypertarget{_lesson08_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}{}\index{Lesson08.\+c@{Lesson08.\+c}!Create\+G\+L\+Window@{Create\+G\+L\+Window}}
+\index{Create\+G\+L\+Window@{Create\+G\+L\+Window}!Lesson08.\+c@{Lesson08.\+c}}
+\subsubsection[{Create\+G\+L\+Window(char $\ast$title, int width, int height, int bits, B\+O\+O\+L fullscreenflag)}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+L Create\+G\+L\+Window (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{title, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bits, }
+\item[{B\+O\+O\+L}]{fullscreenflag}
+\end{DoxyParamCaption}
+)}\label{_lesson08_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc}
+This Code Creates Our Open\+G\+L Window. Parameters Are\+: $\ast$ title -\/ Title To Appear At The Top Of The Window $\ast$ width -\/ Width Of The G\+L Window Or Fullscreen Mode $\ast$ height -\/ Height Of The G\+L Window Or Fullscreen Mode $\ast$ bits -\/ Number Of Bits To Use For Color (8/16/24/32) $\ast$ fullscreenflag -\/ Use Fullscreen Mode (T\+R\+U\+E) Or Windowed Mode (F\+A\+L\+S\+E) 
